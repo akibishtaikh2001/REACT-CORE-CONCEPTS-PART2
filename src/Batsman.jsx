@@ -3,7 +3,8 @@ import { useState } from "react"
 export default function Batsman() {
     const [runs, setRuns] = useState(0);
     const [sixes, setSixes] = useState(0);
-    
+    const [four, setFours] = useState(0);
+
     const handelSingle = () => {
         const updatedRuns = runs + 1;
         setRuns(updatedRuns);
@@ -16,16 +17,24 @@ export default function Batsman() {
         setRuns(updatedRuns);
     }
 
+    const handelFour = () => {
+        const updateFours = four + 1;
+        const updatedRuns = runs + 4;
+        setFours(updateFours);
+        setRuns(updatedRuns);
+    }
+
     return (
         <div>
             <h3>Player: Bangla Batsman</h3>
             <p><small> Six: {sixes} </small></p>
+            <p><small> Four: {four} </small></p>
             {
-                runs > 50 && <p>You score: 50</p>
+                runs >= 50 && <p>You score: 50</p>
             }
             <h1>Score: {runs} </h1>
             <button onClick={handelSingle}>Singels</button>
-            <button>Four</button>
+            <button onClick={handelFour}>Four</button>
             <button onClick={handelSix}>Six</button>
         </div>
     )
