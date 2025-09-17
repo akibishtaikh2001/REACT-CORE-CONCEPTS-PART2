@@ -5,4 +5,4 @@ export default function Post({post}) {
             <p> {post.body} </p>
         </div>
     )
-}  
+}   
