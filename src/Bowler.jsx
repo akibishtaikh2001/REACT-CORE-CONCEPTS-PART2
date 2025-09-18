@@ -11,6 +11,8 @@ export default function Bowler() {
 
     const handelWide = () => {
         const updateWideBall = wide + 1;
+        const updateBall = ball - 1;
+        addball(updateBall)
         wideball(updateWideBall);     
     }
 

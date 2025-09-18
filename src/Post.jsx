@@ -1,5 +1,4 @@
 import { use } from "react"
-import postss from './Postss'
 import Post from "./Postss";
 
 export default function Posts({postsPromise}) {
