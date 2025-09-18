@@ -42,14 +42,14 @@ function App() {
     <>
 
       <h3>Vite + React</h3>
-
+{/* 
       <Suspense fallback={<h4>Post are coming......</h4>}>
       <Posts postsPromise={postsPromise}></Posts>
-      </Suspense>
-
-      {/* <Suspense fallback={<h3>Loading...</h3>}>
-        <Users fetchUsers={fetchUsers}></Users>
       </Suspense> */}
+
+      <Suspense fallback={<h3>Loading...</h3>}>
+        <Users fetchUsers={fetchUsers}></Users>
+      </Suspense>
 
       {/* <Suspense fallback={<h3>Friends are coming for treat...</h3>}>
       <Friends friendsPromise={friendsPromise}></Friends>
